@@ -1,0 +1,158 @@
+:root{
+    --background-color: rgb(185, 157, 121);
+    --primary-color: rgb(50, 50, 50);
+    --secondary-color: rgb(25, 25, 25);
+    --tertiary-color: rgb(250, 247, 242);
+    --btnCorrect-color: rgb(226, 115, 4);
+    --btnConfirm-color: rgb(15, 164, 15);
+    
+    --secondaryHover-color: rgba(0, 0, 0, 0.7);
+    --tertiaryHover-color: rgba(255, 255, 255, 0.7);
+    --btnCorrectHover-color: rgba(226, 115, 4, 0.7);
+    --btnConfirmHover-color: rgba(15, 164, 15, 0.7);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    list-style: none;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+#container{
+    height: 50rem;
+    width: 80rem;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "text header" 
+        "number image";
+}
+/* -----------------------------------------
+                Text-Field
+----------------------------------------- */
+#text-field{
+    border-radius: 2rem 0 0 0;
+    background-color: var(--primary-color);
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inpt{
+    background-color: var(--tertiary-color);
+    height: 6.5rem;
+    width: 45rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+/* -----------------------------------------
+                Image-Field
+----------------------------------------- */
+#image-field{
+    border-radius: 0 0 2rem 0;
+    background-color: var(--tertiary-color);
+    grid-area: image;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#cndtImg{
+    max-width: 70%;
+}
+#cndtName{
+    margin: 2rem 0 1rem 0;
+    font-size: 3rem;
+}
+#cndtMsg{
+    margin: 2rem 0.5rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+/* -----------------------------------------
+                Header-Field
+----------------------------------------- */
+#header-field{
+    border-radius: 0 2rem 0 0;
+    background-color: var(--tertiary-color);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#RFB{
+    margin-left: 2rem;
+    max-width: 25%;
+}
+#headerTitle{
+    font-size: 3.5rem;
+    text-align: center;
+}
+/* -----------------------------------------
+                Keys-Field
+----------------------------------------- */
+#keys-field{
+    border-radius: 0 0 0 2rem;
+    background-color: var(--primary-color);
+    grid-area: number;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "1 2 3"
+        "4 5 6"
+        "7 8 9"
+        ". btn0 ."
+        "whitee correct confirm";
+}
+.btnN{
+    margin: 1rem;
+    padding: 1.25rem;
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    border-radius: 0.5rem;
+}
+.btnN:hover{
+    background-color: var(--secondaryHover-color);
+    color: var(--tertiaryHover-color);
+}
+#btn0{grid-area: btn0} 
+#white{
+    grid-area: whitee;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+#correct{
+    grid-area: correct;
+    background-color: var(--btnCorrect-color);
+}
+#confirm{
+    grid-area: confirm;
+    background-color: var(--btnConfirm-color);
+}
+#white:hover{
+    background-color: var(--tertiaryHover-color); 
+    color: var(--secondaryHover-color);
+}
+#correct:hover{
+    background-color: var(--btnCorrectHover-color); 
+    color: var(--tertiaryHover-color);
+}
+#confirm:hover{
+    background-color: var(--btnConfirmHover-color); 
+    color: var(--tertiaryHover-color);
+}

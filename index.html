@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div id="container">
+
+       <div id="text-field">
+            <input type="text" id="inpt" disabled>
+       </div>
+
+       <div id="header-field">
+            <img src="./img/brasil.png" alt="República Federativa do Brasil" id="RFB">
+            <h2 id="headerTitle">Justiça Eleitoral</h2>
+       </div>
+
+       <div id="image-field">
+            <p id="cndtName">Candidato</p>
+            <img src="./img/anonimo.png" alt="Candidato não definido" id="cndtImg">
+            <p id="cndtMsg"></p>
+       </div>
+
+       <div id="keys-field">
+            <button class="btnN" onclick="writeKey('1')">1</button>
+            <button class="btnN" onclick="writeKey('2')">2</button>
+            <button class="btnN" onclick="writeKey('3')">3</button>
+            <button class="btnN" onclick="writeKey('4')">4</button>
+            <button class="btnN" onclick="writeKey('5')">5</button>
+            <button class="btnN" onclick="writeKey('6')">6</button>
+            <button class="btnN" onclick="writeKey('7')">7</button>
+            <button class="btnN" onclick="writeKey('8')">8</button>
+            <button class="btnN" onclick="writeKey('9')">9</button>
+            <button class="btnN" onclick="writeKey('0')" id="btn0">0</button>
+            <button class="btnN btnF" id="white" onclick="white()">Branco</button>
+            <button class="btnN btnF" id="correct" onclick="correct()">Corrige</button>
+            <button class="btnN btnF" id="confirm" onclick="confirm()">Confirma</button>
+       </div>
+
+    </div>
+
+    <script src="./variables.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

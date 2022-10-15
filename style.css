@@ -110,9 +110,9 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-        "1 2 3"
-        "4 5 6"
-        "7 8 9"
+        "btn1 btn2 btn3"
+        "btn4 btn5 btn6"
+        "btn7 btn8 btn9"
         ". btn0 ."
         "whitee correct confirm";
 }
@@ -130,6 +130,9 @@ body{
     background-color: var(--secondaryHover-color);
     color: var(--tertiaryHover-color);
 }
+#btn1{grid-area: btn1} #btn2{grid-area: btn2} #btn3{grid-area: btn3} 
+#btn4{grid-area: btn4} #btn5{grid-area: btn5} #btn6{grid-area: btn6}
+#btn7{grid-area: btn7} #btn8{grid-area: btn8} #btn9{grid-area: btn9}    
 #btn0{grid-area: btn0} 
 #white{
     grid-area: whitee;
@@ -155,4 +158,79 @@ body{
 #confirm:hover{
     background-color: var(--btnConfirmHover-color); 
     color: var(--tertiaryHover-color);
+}
+
+@media (max-width: 800px){
+    #container{
+        height: 25rem;
+        width: 50rem;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "image" 
+            "text" 
+            "number";
+    }
+    #keys-field{
+        border-radius: 0 0 2rem 2rem;
+    }
+    #text-field{
+        border-radius: 0;
+    }
+    #header-field{
+        border-radius: 2rem 2rem 0 0;
+    }
+    #image-field{
+        border-radius: 0;
+    }
+    #inpt{
+        height: 7rem;
+        width: 40rem;
+        margin: 2rem;
+        font-size: 3rem;
+    }
+    #headerTitle{
+        font-size: 3.5rem;
+        margin: 2rem;
+    }
+    #cndtName{
+        margin: 2rem 0 1rem 0;
+        font-size: 3rem;
+    }
+    #cndtMsg{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    body{
+        align-items: flex-start;
+    }
+}
+@media (max-width: 500px){
+    #container{
+        max-height: 10rem;
+        max-width: 20rem;
+    }
+    #keys-field{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+            "btn1 btn2"
+            "btn3 btn4"
+            "btn5 btn6"
+            "btn7 btn8"
+            "btn9 btn0"
+            "whitee correct"
+            "confirm confirm";
+    }
+    .btnN{
+        margin: 1rem;
+        padding: 1.25rem 0 1.25rem 0;
+        font-size: 3rem;
+    }
+    #inpt{
+        width: 28rem;
+        margin: 1.3rem;
+    }
 }
